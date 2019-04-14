@@ -265,17 +265,10 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-	//if(typeof(value[0]) != "function"){
-		// if (typeof(value) == "string") {
-		// 	return true;
-		// }
- 	// //}
- 	// else
- 	// 	if(typeof(this[0]) == "string" )
- 	// 		return true;
- 	// 	//if(typeof(value()) == "string") return true;
- 	// return false;
-  throw new Error('Not implemented');
+		if (typeof(value) == "string" || Object.prototype.toString.call(value) === "[object String]") {
+			return true;
+		}
+ 	return false;
 }
 
 
