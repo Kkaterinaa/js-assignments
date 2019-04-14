@@ -24,6 +24,11 @@
  */
 function Rectangle(width, height) {
     throw new Error('Not implemented');
+    // var p = [];
+    // p = p.push(width)
+    // return p;
+    // var r = JSON.parse(r);
+    // return w;
 }
 
 

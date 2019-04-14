@@ -24,6 +24,11 @@
  */
 function findElement(arr, value) {
    throw new Error('Not implemented');
+   // for(var i = 0; i < arr.length; i++)
+   //  if(value == arr[i])
+   //    return i;
+   //  return -1;
+   //return arr.map(value);
 }
 
 /**

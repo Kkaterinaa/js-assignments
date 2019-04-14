@@ -22,7 +22,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-    throw new Error('Not implemented');
+   return width*height;
 }
 
 
@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    throw new Error('Not implemented');
+    return 2*Math.PI*radius;
 }
 
 /**
@@ -73,7 +73,9 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    var a = x1 - x2;
+    var b = y1 - y2;
+    return Math.sqrt( a*a + b*b );
 }
 
 /**
@@ -89,7 +91,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-    throw new Error('Not implemented');
+    return (-b)/a;
 }
 
 
@@ -111,7 +113,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    return Math.acos((x1*x2+y1*y2)/(Math.sqrt(x1*x1+y1*y1)*Math.sqrt(x2*x2+y2*y2)));
 }
 
 /**
@@ -127,7 +129,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    return value.toString().split('').pop();
 }
 
 
@@ -143,7 +145,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    throw new Error('Not implemented');
+    return value;
 }
 
 /**
@@ -160,7 +162,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+    return Math.sqrt(a*a+b*b+c*c);
 }
 
 /**
@@ -181,7 +183,9 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    throw new Error('Not implemented');
+   // if(pow == 0) return num;
+   // return ( Math.round(num *( Math.pow(10,pow))) / (Math.pow(10,pow)) );
+throw new Error('Not implemented');
 }
 
 /**
@@ -202,7 +206,21 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+     let result = false;
+  if (n > 1) {
+    let divcounter = 0;
+    for (let counter = 0; n >= counter; counter ++){
+        console.log(counter);
+        if (n%counter === 0) {
+          divcounter ++;
+          console.log ('divc: ' + divcounter);
+      } 
+      result = (divcounter>2) ? false : true;
+    }  
+} else {
+  result = false;
+}
+  return result;
 }
 
 /**
@@ -221,7 +239,12 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+//     if(value == 'string' )
+//     return +value;
+//     if(value == 'function') return +value;
+
+// return 0;
+throw new Error('Not implemented');
 }
 
 module.exports = {

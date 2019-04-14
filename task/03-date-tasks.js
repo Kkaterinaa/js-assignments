@@ -22,7 +22,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
-   throw new Error('Not implemented');
+   return Date.parse(value);
 }
 
 /**
@@ -37,7 +37,7 @@ function parseDataFromRfc2822(value) {
  *    '2016-01-19T08:07:37Z' => Date()
  */
 function parseDataFromIso8601(value) {
-   throw new Error('Not implemented');
+   return Date.parse(value);
 }
 
 
@@ -56,7 +56,8 @@ function parseDataFromIso8601(value) {
  *    Date(2015,1,1)    => false
  */
 function isLeapYear(date) {
-   throw new Error('Not implemented');
+   //return ((date % 4 == 0) && (date % 100 != 0)) || (date % 400 == 0);
+throw new Error('Not implemented');
 }
 
 
@@ -95,6 +96,18 @@ function timeSpanToString(startDate, endDate) {
  */
 function angleBetweenClockHands(date) {
     throw new Error('Not implemented');
+    //(час+(минуты /60))*30 -минуты*6
+   // if(date.getHours()-2 == 0) return (((date.getHours()-2+(date.getMinutes()/60))*30-date.getMinutes()*6)*180)/Math.PI;
+  // return (((date.getHours()+(date.getMinutes()/60))*30-date.getMinutes()*6)*180)/Math.PI;
+ //  return date.getHours();
+//var result = ((date.getMinutes() - date.getHours()*5)*6);
+
+//while(result < 0){
+//  result+=60;
+// }
+
+//  //if(result < 0) return result+60;
+//  return result*Math.PI/180;
 }
 
 
